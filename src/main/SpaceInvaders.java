@@ -15,11 +15,6 @@ public class SpaceInvaders {
 	   this.longueur = longueur;
 	   this.hauteur = hauteur;
    }
-    
-    @Override
-	public String toString() {
-		return recupererEspaceJeuDansChaineASCII();
-	}
 
 	public String recupererEspaceJeuDansChaineASCII() {
 		StringBuilder espaceDeJeu = new StringBuilder();
