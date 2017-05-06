@@ -1,5 +1,7 @@
 package main;
 
+import moteurJeu.Commande;
+
 public class Vaisseau {
 
 	private Position origine;
@@ -45,7 +47,7 @@ public class Vaisseau {
 		return this.origine.ordonnee();
 	}
 
-	private int ordonneeLaPlusBasse() {
+	public int ordonneeLaPlusBasse() {
 		return this.origine.ordonnee() - this.dimension.hauteur() + 1;
 	}
 
@@ -67,5 +69,20 @@ public class Vaisseau {
 
 	public int longueur() {
 		return this.dimension.longueur;
+	}
+	
+	public int hauteur() {
+		return this.dimension.hauteur;
+	}
+
+	public void seDeplacer(Commande commande) {
+		if (commande.gauche) {
+			seDeplacerVersLaGauche();
+		}
+		
+		if (commande.droite) {
+			seDeplacerVersLaDroite();
+		}
+		
 	}
 }
