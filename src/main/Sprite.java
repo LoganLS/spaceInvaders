@@ -18,15 +18,7 @@ public abstract class Sprite {
 	}
 
 	public Sprite() {
-		super();
-	}
-
-	public void seDeplacerVersLaDroite() {
-		    this.origine.changerAbscisse(this.origine.abscisse() + vitesse);
-	   }
-
-	public void seDeplacerVersLaGauche() {
-		 this.origine.changerAbscisse(this.origine.abscisse() - vitesse);
+		super(); 
 	}
 
 	public void positionner(int x, int y) {
@@ -72,13 +64,20 @@ public abstract class Sprite {
 
 	public void seDeplacer(Commande commande) {
 		if (commande.gauche) {
-			seDeplacerVersLaGauche();
+			deplacerHorizontalementVers(Direction.GAUCHE);
 		}
 		
 		if (commande.droite) {
-			seDeplacerVersLaDroite();
+			deplacerHorizontalementVers(Direction.DROITE);
 		}
-		
 	}
-
+	
+	public void deplacerVerticalementVers(Direction direction) {
+		this.origine.changerOrdonnee(this.origine.ordonnee() + direction.valeur()*vitesse);
+	}
+	
+	public void deplacerHorizontalementVers(Direction direction) {
+		this.origine.changerAbscisse(this.origine.abscisse() + direction.valeur()*vitesse);
+	}
+	
 }
