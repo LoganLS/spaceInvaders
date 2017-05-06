@@ -14,7 +14,7 @@ public class Controleur implements KeyListener {
 	/**
 	 * commande en cours
 	 */
-	private Commande commandeEnCours;
+	private Commande commandeEnCours; 
 	/**
 	 * commande a retourner la difference avec la commandeencours vient du fait
 	 * qu'on veut memoriser une touche appuyee
@@ -68,6 +68,10 @@ public class Controleur implements KeyListener {
 			this.commandeEnCours.bas = true;
 			this.commandeARetourner.bas = true;
 			break;
+		case KeyEvent.VK_SPACE :
+			this.commandeEnCours.tir = true;
+			this.commandeARetourner.tir = true;
+			break;
 		}
 
 	}
@@ -89,6 +93,9 @@ public class Controleur implements KeyListener {
 			break;
 		case KeyEvent.VK_DOWN :
 			this.commandeEnCours.bas = false;
+			break;
+		case KeyEvent.VK_SPACE :
+			this.commandeEnCours.tir = true;
 			break;
 		}
 

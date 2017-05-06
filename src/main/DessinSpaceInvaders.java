@@ -11,7 +11,7 @@ public class DessinSpaceInvaders implements DessinJeu {
 	private SpaceInvaders jeu;
 	
 	public DessinSpaceInvaders(SpaceInvaders jeu) {
-		this.jeu = jeu;
+		this.jeu = jeu; 
 	}
 	
 	@Override
@@ -20,14 +20,24 @@ public class DessinSpaceInvaders implements DessinJeu {
 			Vaisseau v = jeu.recupererVaisseau();
 			dessinerUnVaisseau(v, image);
 		}
+		if (jeu.aUnMissile()) {
+			Missile m = jeu.recupererMissile();
+			dessinerUnMissile(m, image);
+		}
 		
 	}
 
 	private void dessinerUnVaisseau(Vaisseau v, BufferedImage image) {
 		Graphics2D crayon = (Graphics2D) image.getGraphics();
-		crayon.setColor(Color.RED);
+		crayon.setColor(Color.GRAY);
 		crayon.fillRect(v.abscisseLaPlusAGauche(), v.ordonneeLaPlusBasse(), v.longueur(), v.hauteur());
-
 	}
+	
+	private void dessinerUnMissile(Missile m, BufferedImage image) {
+		Graphics2D crayon = (Graphics2D) image.getGraphics();
+		crayon.setColor(Color.BLUE);
+		crayon.fillRect(m.abscisseLaPlusAGauche(), m.ordonneeLaPlusBasse(), m.longueur(), m.hauteur());
+	}
+	
 
 }
