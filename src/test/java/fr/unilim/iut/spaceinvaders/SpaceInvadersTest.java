@@ -6,6 +6,9 @@ import static org.junit.Assert.fail;
 import org.junit.Before;
 import org.junit.Test;
 
+import utils.DebordementEspaceJeuException;
+import utils.HorsEspaceJeuException;
+
 public class SpaceInvadersTest {
 	
     private SpaceInvaders spaceinvaders;

@@ -2,7 +2,8 @@ package fr.unilim.iut.spaceinvaders;
 
 import fr.unilim.iut.spaceinvaders.moteurJeu.Commande;
 import fr.unilim.iut.spaceinvaders.moteurJeu.Jeu;
-import fr.unilim.iut.spaceinvaders.HorsEspaceJeuException;
+import utils.DebordementEspaceJeuException;
+import utils.HorsEspaceJeuException;
 
 public class SpaceInvaders implements Jeu{
 	int longueur;
