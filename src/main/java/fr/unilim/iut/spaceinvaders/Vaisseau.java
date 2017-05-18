@@ -1,6 +1,6 @@
 package fr.unilim.iut.spaceinvaders;
 
-import utils.MissileException;
+import fr.unilim.iut.spacesinvaders.utils.MissileException;
 
 public class Vaisseau extends Sprite {
 

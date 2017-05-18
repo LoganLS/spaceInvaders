@@ -1,4 +1,4 @@
-package utils;
+package fr.unilim.iut.spacesinvaders.utils;
 
 public class HorsEspaceJeuException extends RuntimeException {
 

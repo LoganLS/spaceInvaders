@@ -9,7 +9,6 @@ public abstract class Sprite {
 	protected int vitesse;
 
 	
-	
 	public Sprite(Dimension dimension, Position origine, int vitesse) {
 		super();
 		this.dimension = dimension;

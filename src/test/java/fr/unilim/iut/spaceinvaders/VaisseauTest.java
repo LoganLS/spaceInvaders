@@ -2,7 +2,7 @@ package fr.unilim.iut.spaceinvaders;
 
 import org.junit.Test;
 
-import utils.MissileException;
+import fr.unilim.iut.spacesinvaders.utils.MissileException;
 
 public class VaisseauTest {
 
