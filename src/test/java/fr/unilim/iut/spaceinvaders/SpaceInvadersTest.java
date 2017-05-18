@@ -7,7 +7,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import utils.DebordementEspaceJeuException;
-import utils.HorsEspaceJeuException;
+import utils.HorsEspaceJeuException; 
 
 public class SpaceInvadersTest {
 	
